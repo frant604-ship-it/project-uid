@@ -14,11 +14,15 @@ import java.sql.SQLException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        stage.setTitle("Bangers");
+        stage.getIcons().setAll(Risorse.iconeFinestra());
+
         Database database;
         try {
             database = Database.apri();
         } catch (SQLException | IOException errore) {
             Alert avviso = new Alert(Alert.AlertType.ERROR, errore.getMessage());
+            avviso.initOwner(stage);
             avviso.setHeaderText("Impossibile aprire il catalogo");
             avviso.showAndWait();
             return;
@@ -30,7 +34,6 @@ public class HelloApplication extends Application {
         controller.avvia(database);
         scene.getStylesheets().add(Risorse.css());
 
-        stage.setTitle("Bangers");
         stage.setMinWidth(760);
         stage.setMinHeight(560);
         stage.setScene(scene);
