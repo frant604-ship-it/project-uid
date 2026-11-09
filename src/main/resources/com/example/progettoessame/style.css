@@ -1,0 +1,282 @@
+.root {
+
+    -fx-background-color:#ffffff;
+
+
+
+    -fx-background-attachment: fixed;
+    -fx-background-size: 100% 100%;
+
+    -fx-background-position: center;
+
+
+
+    -fx-background-size: cover;
+}
+.hbox{
+    -fx-background-color: #36648B;
+}
+.sidebar{
+
+
+    -fx-background-color: #4175A2;
+
+}
+.serch{
+    -fx-background-radius: 20;
+}
+.categoria-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-cursor: hand;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+
+
+
+}
+
+.categoria-btn:selected {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-underline: true;
+}
+.fotoprofilo{
+
+}
+.sceglicapo{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+
+}
+.titolo-prodotto {
+    -fx-font-family: "Helvetica Neue", "Helvetica", "Arial";
+    -fx-font-size: 22px;
+    -fx-text-fill: #000000;
+}
+.descrizione{
+    -fx-font-weight: lighter;
+    -fx-font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
+    -fx-font-size: 25px;
+}
+
+.button:hover .label {
+    -fx-underline: true;
+}
+.button .label {
+    -fx-underline: false;
+}
+
+.button-taglia {
+    -fx-background-color: transparent;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+
+
+    -fx-background-radius: 40;
+    -fx-border-radius: 40;
+
+
+    -fx-padding: 8px 18px 8px 18px;
+    -fx-cursor: hand;
+}
+
+
+.button-taglia:hover {
+    -fx-background-color: #f0f0f0;
+}
+
+
+.button-taglia-selezionato {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+.button-taglia-selezionato:hover {
+    -fx-background-color: #1a1a1a;
+}
+
+
+.button-taglia:disabled {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cccccc;
+    -fx-cursor: default;
+}
+
+.btn-carrello-semplice {
+    -fx-background-color: #111111;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: normal;
+
+
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+
+
+    -fx-padding: 15px 40px 15px 40px;
+
+    -fx-cursor: hand;
+}
+
+
+.btn-carrello-semplice:hover {
+    -fx-background-color: #1a1a1a;
+}
+
+.carrello-popup-contenitore {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+
+    -fx-padding: 15px;
+    -fx-pref-width: 340px;
+
+
+}
+
+
+.login-root {
+    -fx-background-color: #ffffff;
+}
+
+
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+
+.tab-pane *.tab-header-area *.tab-header-background {
+    -fx-background-color: transparent;
+}
+
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 10px 30px 10px 30px;
+    -fx-cursor: hand;
+}
+
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #999999;
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #000000;
+}
+
+
+.tab-pane .tab:selected {
+    -fx-border-color: transparent transparent #000000 transparent;
+    -fx-border-width: 2px;
+}
+
+
+
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+
+    -fx-padding: 12px 15px 12px 15px;
+    -fx-text-fill: #000000;
+    -fx-font-family: "Helvetica Neue", Arial, sans-serif;
+    -fx-font-size: 14px;
+
+
+    -fx-max-width: 300px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #000000;
+}
+
+.text-field .text, .password-field .text {
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+
+.login-titolo {
+    -fx-text-fill: #000000;
+    -fx-font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-letter-spacing: -0.5px;
+}
+
+.context-menu {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px 0px 5px 0px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+}
+
+
+.context-menu .menu-item {
+    -fx-padding: 8px 20px 8px 15px;
+    -fx-background-color: transparent;
+}
+
+
+.context-menu .menu-item .label {
+    -fx-text-fill: #111111;
+    -fx-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+
+.context-menu .menu-item:focused,
+.context-menu .menu-item:hover {
+    -fx-background-color: #111111;
+}
+
+/
+.context-menu .menu-item:focused .label,
+.context-menu .menu-item:hover .label {
+    -fx-text-fill: #ffffff;
+}
+.tendina{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8px;
+    -fx-border-color: #111111;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 10, 0, 0, 5);
+ }
+ .button-logout {
+     -fx-background-color: transparent;
+     -fx-border-color: transparent;
+     -fx-text-fill: #ff9999;
+     -fx-font-family: "Segoe UI", "System", sans-serif;
+     -fx-font-size: 12px;
+     -fx-font-weight: bold;
+     -fx-underline: true;
+     -fx-cursor: hand;
+ }
+ .button-logout:hover {
+     -fx-text-fill: #ff4d4d;
+ }
+
+ .button-logout:armed {
+     -fx-text-fill: #cc0000;
+ }
+xq

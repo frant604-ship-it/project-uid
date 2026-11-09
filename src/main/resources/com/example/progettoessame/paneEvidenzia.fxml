@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettoessame.DettaglioProdottoController">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="info" prefWidth="500.0">
+               <children>
+                  <Label fx:id="lblNome" styleClass="descrizione" text="Label" />
+                  <Label fx:id="lblPrezzo" styleClass="descrizione" text="Label">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="50.0" />
+                     </padding></Label>
+                  <Label styleClass="descrizione" text="Descrizione">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding></Label>
+                  <Label fx:id="lblDescrizione" text="Label" wrapText="true">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding></Label>
+               </children>
+               <padding>
+                  <Insets left="15.0" top="300.0" />
+               </padding>
+            </VBox>
+            <ScrollPane fx:id="Colonna_Centrale" fitToWidth="true" hbarPolicy="NEVER" prefWidth="300.0" vbarPolicy="NEVER" HBox.hgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="contenitoreFoto" alignment="CENTER">
+                     <children>
+                        <ImageView fx:id="imgFronte" fitHeight="1006.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="imgRetro" fitHeight="1006.0" fitWidth="299.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <VBox fx:id="Acquisto" prefWidth="500.0">
+               <children>
+                  <Label text="Taglia:">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="20.0" />
+                     </font></Label>
+                  <HBox fx:id="contenitoreTaglie" prefHeight="100.0" prefWidth="300.0">
+                     <children>
+                        <Button fx:id="btnXS" mnemonicParsing="false" onAction="#gestisciSelezioneTaglia" styleClass="button-taglia" text="XS">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnS" mnemonicParsing="false" onAction="#gestisciSelezioneTaglia" styleClass="button-taglia" text="S">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnM" mnemonicParsing="false" onAction="#gestisciSelezioneTaglia" styleClass="button-taglia" text="M">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnL" mnemonicParsing="false" onAction="#gestisciSelezioneTaglia" styleClass="button-taglia" text="L">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnXL" mnemonicParsing="false" onAction="#gestisciSelezioneTaglia" styleClass="button-taglia" text="XL">
+                           <HBox.margin>
+                              <Insets right="20.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btnXXL" mnemonicParsing="false" onAction="#gestisciSelezioneTaglia" styleClass="button-taglia" text="XXL">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Button fx:id="btnAggiungi" mnemonicParsing="false" onAction="#aggiungiAlCarrello" styleClass="btn-carrello-semplice" text="AGGIUNGI AL CARRELLO" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="70.0" top="300.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

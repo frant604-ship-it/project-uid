@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettoessame.HelloController">
+   <children>
+      <AnchorPane fx:id="centroContenitore" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+         <children>
+            <VBox fx:id="boxMenuUtente" alignment="CENTER" layoutX="700.0" layoutY="43.0" prefHeight="100.0" prefWidth="160.0" spacing="10.0" styleClass="tendina" AnchorPane.rightAnchor="76.0" AnchorPane.topAnchor="2.0">
+               <children>
+                  <Label fx:id="lblBenvenutoHome" styleClass="label-utente" text="Arrivederci">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Label>
+                  <Button mnemonicParsing="false" onAction="#gestisciLogoutHome" styleClass="button-logout" text="LOGOUT" />
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <StackPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="68.0" styleClass="hbox" StackPane.alignment="CENTER_LEFT">
+               <children>
+                  <Button fx:id="btnBurger" mnemonicParsing="false" onAction="#gestisciSidebar" style="-fx-background-color: traspa;">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Unknown-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="txtCerca" onKeyReleased="#gestisciRicerca" promptText="search" styleClass="serch">
+                     <HBox.margin>
+                        <Insets top="12.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnBorsa" mnemonicParsing="false" onAction="#mostraCarrelloPopup" prefHeight="71.0" prefWidth="63.0" style="-fx-background-color: trasparent;">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@immagini/Screenshot_2026-05-20_alle_15.59.04-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnUtente" mnemonicParsing="false" onAction="#apriFinestraLogin" style="-fx-background-color: trasparent;">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Screenshot_2026-06-04_alle_11.05.05-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnLogo" mnemonicParsing="false" onAction="#tornaHome" prefHeight="96.0" prefWidth="134.0" style="-fx-background-color: trasparent;">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@logoTTG.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <VBox fx:id="sidebar" alignment="TOP_RIGHT" prefWidth="279.0" styleClass="sidebar" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#gestisciSidebar" style="-fx-background-color: trasparengt;">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Unknown-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <VBox spacing="20.0">
+               <children>
+                  <ToggleButton fx:id="btnDonna" mnemonicParsing="false" styleClass="categoria-btn" text="DONNA" />
+                  <ToggleButton fx:id="btnUomo" mnemonicParsing="false" onAction="#initialize" styleClass="categoria-btn" text="UOMO" />
+               </children>
+               <padding>
+                  <Insets top="30.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Button fx:id="btnMagliette" mnemonicParsing="false" onMouseClicked="#clickMagliette" styleClass="sceglicapo" text="MAGLIETTE">
+                           <padding>
+                              <Insets bottom="45.0" top="45.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnPantaloni" mnemonicParsing="false" onAction="#clickPantaloni" styleClass="sceglicapo" text="PANTALONI">
+                           <padding>
+                              <Insets bottom="45.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnScarpe" mnemonicParsing="false" onAction="#clickScarpe" styleClass="sceglicapo" text="FELPE" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
