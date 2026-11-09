@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="radice" focusTraversable="true" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.progettoessame.controller.NegozioController">
+    <StackPane fx:id="pagina">
+        <ScrollPane fx:id="scorrimento" styleClass="scorrimento" fitToWidth="true"
+                    hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" pannable="true"/>
+    </StackPane>
+    <StackPane fx:id="testata" styleClass="testata" pickOnBounds="false"
+               maxHeight="-Infinity" StackPane.alignment="TOP_CENTER">
+        <BorderPane pickOnBounds="false">
+            <left>
+                <HBox alignment="CENTER_LEFT" spacing="4" pickOnBounds="false">
+                    <Button fx:id="uomo" text="Uomo" onAction="#mostraUomo"/>
+                    <Button fx:id="donna" text="Donna" onAction="#mostraDonna"/>
+                    <Button fx:id="tutti" text="Tutti" onAction="#mostraTutti"/>
+                </HBox>
+            </left>
+            <right>
+                <HBox alignment="CENTER_RIGHT" spacing="4" pickOnBounds="false">
+                    <Button fx:id="ricerca" onAction="#cerca" accessibleText="Cerca">
+                        <tooltip><Tooltip text="Cerca"/></tooltip>
+                    </Button>
+                    <Button fx:id="account" onAction="#apriAccount" accessibleText="Account">
+                        <tooltip><Tooltip text="Account"/></tooltip>
+                    </Button>
+                    <Button fx:id="borsa" onAction="#apriCarrello" accessibleText="Carrello">
+                        <tooltip><Tooltip text="Carrello"/></tooltip>
+                    </Button>
+                </HBox>
+            </right>
+        </BorderPane>
+        <Button styleClass="logo" onAction="#mostraTutti" accessibleText="Bangers, torna a Tutti">
+            <graphic><ImageView fx:id="logo" fitWidth="295" fitHeight="78" preserveRatio="true"/></graphic>
+        </Button>
+    </StackPane>
+</StackPane>

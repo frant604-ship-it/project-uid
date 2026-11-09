@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="18" styleClass="pagina-interna,dettaglio" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.progettoessame.controller.DettaglioController">
+    <Button fx:id="indietro" text="←  Torna al catalogo" styleClass="indietro"/>
+    <GridPane hgap="32" minHeight="0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="59"/>
+            <ColumnConstraints percentWidth="41"/>
+        </columnConstraints>
+        <ScrollPane fx:id="scorrimentoFoto" styleClass="scorrimento" fitToWidth="true" pannable="true"
+                    hbarPolicy="NEVER" vbarPolicy="AS_NEEDED" minHeight="0" GridPane.vgrow="ALWAYS">
+            <VBox fx:id="foto" minWidth="0" spacing="8"/>
+        </ScrollPane>
+        <VBox spacing="12" minWidth="0" GridPane.columnIndex="1" styleClass="scheda-dettaglio">
+            <Label fx:id="nome" styleClass="titolo-catalogo" wrapText="true"/>
+            <Label fx:id="prezzo" styleClass="prezzo-dettaglio"/>
+            <Label fx:id="descrizione" styleClass="descrizione" wrapText="true"/>
+            <Label text="Taglia" styleClass="etichetta-taglia"/>
+            <FlowPane fx:id="taglie" hgap="6" vgap="6" styleClass="taglie"/>
+            <Button fx:id="aggiungi" text="Aggiungi al carrello" maxWidth="Infinity" styleClass="azione"/>
+            <Label fx:id="stato" styleClass="stato" wrapText="true"/>
+        </VBox>
+    </GridPane>
+</VBox>
